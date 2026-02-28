@@ -1,0 +1,62 @@
+Diagrama de Visão de Negócios
+DATALUMINI
+
+COMO PROSSEGUIR APÓS A COMPRA?
+
+-- ⚠️ O PROBLEMA ⚠️ ------------------------------------------------------------------------------------------
+O problema surge quando o cliente não tem controle sobre a incidência de luz nas estufas, seja ela natural 
+ou sintética, o que pode atrapalhar todo o projeto de pesquisa da Arabidopsis thaliana, criando dados 
+inconsistentes ou até em casos complexos a anulação da pesquisa.
+
+---------------------------------------------------------------------------------------------------------------
+
+1. PLANEJAMENTO 📆
+  Será discutido a situação do cliente e suas especificações para que o projeto e as necessidades sigam na 
+mesma linha. Vamos levar em conta, a organização das estufas, os grupos de plantas e o ambiente no qual o 
+Arduino será instalado.
+
+2. INSTALAÇÃO FÍSICA 💪
+  Pós planejamento, o processo de instalação dos Arduinos nas estufas começará, junto a realização de testes 
+para confirmação da captação, armazenamento e  modelagem de dados.
+
+3. INSTALAÇÃO LÓGICA 🧠
+  No site operacional, o cliente controlará todas as funções do projeto que foram pré-definidas no 
+planejamento, como ferramentas de cadastro da empresa e funcionários, possibilidade de análise dos dados 
+captados dos sensores em tempo real e outras diversas funções.
+
+4. TRATAMENTO DOS DADOS 🎲
+  O tratamento dos dados é utilizado para transformar registros brutos captados pelos sensores em informações 
+importantes que serão usadas nas principais ferramentas do site, como os Dashboards e estimativas.
+
+5. DASHBOARDS 📊
+  Uma das partes mais importantes do nosso projeto são os Dashboards, nos quais o cliente terá suporte para 
+gerenciar estimativas a longo prazo, detalhamento do dia á dia, funções em tempo real, cálculos de 
+produtividade etc. O tratamento dos dados e essas ferramentas trabalham junto para o funcionamento do projeto.
+
+
+-- 🏁 VANTAGENS 🏁 --------------------------------------------------------------------------------------------
+
+No final, nosso cliente vai usufruir das vantagens que somente a gente oferece:
+
+. Controle total da iluminação das espécimes de suas pesquisas, garantindo segurança nessa fator.
+
+. Um sistema completo de análises de dados, com comparações, estimativas e registros em tempo real, baseado nos 
+dados captados pelos sensores que foram instalados em suas estufas.
+
+. E um serviço de manutenção de toda parte lógica digital, incluindo o site operacional e seus sistemas 
+complementares.
+
+----------------------------------------------------------------------------------------------------------------
+
+GRUPO - SENSOR DE ILUMINAÇÃO DA ARADOPSIS THALIANA - 1CCOA
+
+Integrantes do grupo:
+
+Ana Carolina Viana Dos Reis 
+Arthur Nascimento Martins 
+Caio Picciarelli Silva 
+Felipe Gonçalves Mota Dos Santos 
+Gabriel Vellenick Zanotti 
+Guilherme Barbosa De A. 
+Marcus Brenno De Souza Lima
+Gustavo Gonçalves Da Costa 
