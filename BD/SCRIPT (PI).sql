@@ -25,12 +25,13 @@ CREATE TABLE cadastro_empresa (
 -- Insert de dados
 
 INSERT INTO cadastro_empresa(razao_social, nome_fantasia, cnpj_empresa, email_empresa, cep_empresa, status_empresa, responsavel_legal, email_responsavel, cpf_responsavel, cnae_empresa) VALUES
-	('Nike, Inc.', 'NIKE', '12.345.678/0001-01', 'contato@nike.com', '01001000', 'Ativa', 'John Donahoe', 'john.doe@nike.com', '123.456.789-01', '4645101'),
-	('Apple Inc.', 'Apple', '23.456.789/0001-02', 'contato@apple.com', '20040002', 'Ativa', 'Tim Cook', 'tim.cook@apple.com', '234.567.890-12', '6201501'),
-	('Microsoft Corporation', 'Microsoft', '34.567.890/0001-03', 'contato@microsoft.com', '30140071', 'Ativa', 'Satya Nadella', 'satya@microsoft.com', '345.678.901-23', '6202300'),
-	('Amazon.com, Inc.', 'Amazon', '45.678.901/0001-04', 'contato@amazon.com', '40020000', 'Ativa', 'Andy Jassy', 'andy@amazon.com', '456.789.012-34', '4791101'),
-	('Google LLC', 'Google', '56.789.012/0001-05', 'contato@google.com', '50010000', 'Ativa', 'Sundar Pichai', 'sundar@google.com', '567.890.123-45', '6203100'),
-	('Tesla, Inc.', 'Tesla', '67.890.123/0001-06', 'contato@tesla.com', '60020000', 'Ativa', 'Elon Musk', 'elon@tesla.com', '678.901.234-56', '2910701');
+
+	('BioPlanta Laboratórios Ltda.', 'BioPlanta', '11.222.333/0001-10', 'contato@bioplanta.com.br', '01002000', 'Ativa', 'Mariana Souza', 'mariana.souza@bioplanta.com.br', '123.987.456-10', '7210000'),
+	('AgroTech Pesquisa Vegetal S.A.', 'AgroTech Vegetal', '22.333.444/0001-20', 'contato@agrotechveg.com.br', '13015010', 'Ativa', 'Ricardo Almeida', 'ricardo.almeida@agrotechveg.com.br', '234.876.543-21', '7210000'),
+	('Cultivar Biotecnologia de Plantas Ltda.', 'Cultivar Bio', '33.444.555/0001-30', 'contato@cultivarbio.com.br', '14020050', 'Ativa', 'Fernanda Lima', 'fernanda.lima@cultivarbio.com.br', '345.765.432-32', '7210000'),
+	('VerdeLab Micropropagação Vegetal Ltda.', 'VerdeLab', '44.555.666/0001-40', 'contato@verdelab.com.br', '15030060', 'Ativa', 'Carlos Henrique Martins', 'carlos.martins@verdelab.com.br', '456.654.321-43', '0161003'),
+	('Genética Flora Pesquisa e Desenvolvimento Ltda.', 'GenFlora', '55.666.777/0001-50', 'contato@genflora.com.br', '16040070', 'Ativa', 'Patrícia Rodrigues', 'patricia.rodrigues@genflora.com.br', '567.543.210-54', '7210000'),
+	('EstufaTech Cultivo Controlado S.A.', 'EstufaTech', '66.777.888/0001-60', 'contato@estufatech.com.br', '17050080', 'Ativa', 'Eduardo Carvalho', 'eduardo.carvalho@estufatech.com.br', '678.432.109-65', '0113000');
    
 -- select de todos os dados na tabela
 
