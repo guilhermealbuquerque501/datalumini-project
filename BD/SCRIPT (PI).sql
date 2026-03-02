@@ -22,6 +22,20 @@ CREATE TABLE cadastro_empresa (
     CONSTRAINT cStatus_empresa CHECK (status_empresa IN('Ativa', 'Inativa')) -- restrição ativa ou inativa
 );
 
+-- Insert de dados
+
+INSERT INTO cadastro_empresa(razao_social, nome_fantasia, cnpj_empresa, email_empresa, cep_empresa, status_empresa, responsavel_legal, email_responsavel, cpf_responsavel, cnae_empresa) VALUES
+	('Nike, Inc.', 'NIKE', '12.345.678/0001-01', 'contato@nike.com', '01001000', 'Ativa', 'John Donahoe', 'john.doe@nike.com', '123.456.789-01', '4645101'),
+	('Apple Inc.', 'Apple', '23.456.789/0001-02', 'contato@apple.com', '20040002', 'Ativa', 'Tim Cook', 'tim.cook@apple.com', '234.567.890-12', '6201501'),
+	('Microsoft Corporation', 'Microsoft', '34.567.890/0001-03', 'contato@microsoft.com', '30140071', 'Ativa', 'Satya Nadella', 'satya@microsoft.com', '345.678.901-23', '6202300'),
+	('Amazon.com, Inc.', 'Amazon', '45.678.901/0001-04', 'contato@amazon.com', '40020000', 'Ativa', 'Andy Jassy', 'andy@amazon.com', '456.789.012-34', '4791101'),
+	('Google LLC', 'Google', '56.789.012/0001-05', 'contato@google.com', '50010000', 'Ativa', 'Sundar Pichai', 'sundar@google.com', '567.890.123-45', '6203100'),
+	('Tesla, Inc.', 'Tesla', '67.890.123/0001-06', 'contato@tesla.com', '60020000', 'Ativa', 'Elon Musk', 'elon@tesla.com', '678.901.234-56', '2910701');
+   
+-- select de todos os dados na tabela
+
+SELECT * FROM cadastro_empresa;
+    
 -- Essa tabela foi criada com o intuito de guardar, gerenciar e modelar os dados que se relacionam com o cadastro dos funcionarios
 -- nas empresas já cadastradas no nosso site
 
@@ -39,6 +53,21 @@ CREATE TABLE cadastro_funcionario (
     CONSTRAINT cStatus_funcionario CHECK (status_funcionario IN('Ativo', 'Inativo')) -- restrição do status para ativo e inativo
 );
 
+-- insert dos dados
+
+INSERT INTO cadastro_funcionario ( nome_completo_funcionario, email_funcionario, senha_funcionario, cpf_funcionario, status_funcionario, nome_empresa, id_empresa ) VALUES
+
+('Carlos Eduardo Mendes', 'carlos.mendes@techsolutions.com.br', 'Senha@123', '123.456.789-01', 'Ativo', 'Tech Solutions LTDA', '1'),
+('Mariana Oliveira Santos', 'mariana.santos@techsolutions.com.br', 'Mariana@2024', '123.456.789-02', 'Ativo', 'Tech Solutions LTDA', '1'),
+('Rafael Henrique Costa', 'rafael.costa@inovadata.com.br', 'Rafael#2024', '123.456.789-03', 'Ativo', 'InovaData Sistemas', '2'),
+('Juliana Ferreira Lima', 'juliana.lima@inovadata.com.br', 'Juliana@321', '123.456.789-04', 'Inativo', 'InovaData Sistemas', '2'),
+('Fernanda Almeida Rocha', 'fernanda.rocha@globaltech.com.br', 'Fernanda@789', '123.456.789-05', 'Ativo', 'GlobalTech Tecnologia', '3'),
+('Bruno Martins Souza', 'bruno.souza@globaltech.com.br', 'Bruno@456', '123.456.789-06', 'Ativo', 'GlobalTech Tecnologia', '3');
+
+-- select dos dados
+
+SELECT * FROM cadastro_funcionario;
+
 -- -- Essa tabela foi criada com o intuito de guardar, gerenciar e modelar os dados que se relacionam com o cadastro de todos os sensores
 -- que a empresa tem acesso, sejam eles ativos ou inativos
 
@@ -52,6 +81,20 @@ CREATE TABLE sensores (
     dt_atualizacao DATETIME DEFAULT CURRENT_TIMESTAMP, -- data da ultima atualização nos dados dos sensor
     CONSTRAINT cSensor_status CHECK (status_sensor IN('Ativo', 'Inativo')) -- restrição do status para ativo e inativo
 );
+
+-- insert dados
+
+INSERT INTO sensores (nome_sensor, estufa_sensor, grupo_estufa_sensor, status_sensor) VALUES
+	('BH1750 Lux Sensor - Estufa 1A', 'Estufa 1', 1, 'Ativo'),
+	('TSL2561 Luminosidade - Estufa 1B', 'Estufa 1', 2, 'Ativo'),
+	('LDR GL5528 - Estufa 2A', 'Estufa 2', 1, 'Ativo'),
+	('VEML7700 Alta Precisão - Estufa 2B', 'Estufa 2', 2, 'Ativo'),
+	('MAX44009 Digital Lux - Estufa 3A', 'Estufa 3', 1, 'Inativo'),
+	('OPT3001 Texas Instruments - Estufa 3B', 'Estufa 3', 2, 'Ativo');
+	
+-- select dos dados da tabela
+
+SELECT * FROM sensores;
 
 -- Essa tabela foi criada com o intuito de guardar, gerenciar e modelar os dados que se relacionam com a captação
 -- de dados da iluminação de um grupo x de plantas em uma x estufa
@@ -71,6 +114,21 @@ CREATE TABLE leituras_luminosidade (
 	CONSTRAINT cStatus_arduino CHECK (status_arduino In('Ativo', 'Inativo'))
 );
 
+-- inserindo dados
+
+INSERT INTO leituras_luminosidade (id_sensor, status_arduino, luminosidade, unidade, status_luminosidade, estufa_sensor, grupo_estufa_sensor) VALUES
+
+	(1, 'Ativo', 12500.50, 'lux', 'Alto', 'Estufa 1', 1),
+	(2, 'Ativo', 8420.30, 'lux', 'Médio', 'Estufa 1', 2),
+	(3, 'Ativo', 3200.75, 'lux', 'Baixo', 'Estufa 2', 1),
+	(4, 'Ativo', 15400.90, 'lux', 'Alto', 'Estufa 2', 2),
+	(5, 'Inativo', 0.00, 'lux', 'Sem leitura', 'Estufa 3', 1),
+	(6, 'Ativo', 6780.45, 'lux', 'Médio', 'Estufa 3', 2);
+    
+-- SELECT dos dados da tabela
+
+SELECT * FROM leituras_luminosidade;
+    
 -- Essa tabela foi criada com o intuito de guardar, gerenciar e modelar os dados que se relacionam com a organização de grupos
 -- em uma x estufa, separadas por colunas e linhas que criam "quadrados" nos quais os sensores poderam analisar 
 -- captando dados diferentes para cada grupo seleto.
@@ -84,9 +142,23 @@ CREATE TABLE grupo_plantas (
     sensor_modelo VARCHAR(30) NOT NULL, -- nome do sensor senso utlizado nesse grupo de plantas relacionado com a table sensores
     id_sensor INT, -- id do sensor utilizado nesse grupo relacionado com a table sensores
     status_grupo_plantas VARCHAR(15) DEFAULT 'Ativo' NOT NULL,
+	dt_instalacao DATETIME DEFAULT CURRENT_TIMESTAMP, -- data de instalação do sensor, que relaciona com a tabela dos sensores
+    dt_atualizacao DATETIME DEFAULT CURRENT_TIMESTAMP, -- data da ultima atualização dos dados 
     CONSTRAINT cStatus_grupo_plantas CHECK (status_grupo_plantas IN('Ativo', 'Inativo'))
 );
 
+INSERT INTO grupo_plantas (nome_grupo_plantas, qtd_plantas_grupo, coluna_plantas, linha_plantas, sensor_modelo, id_sensor, status_grupo_plantas) VALUES
+
+	('Arabidopsis thaliana - WT (Wild Type)', 40, 'Coluna 1', 'Linha A', 'BH1750 Lux Sensor', 1, 'Ativo'),
+	('Arabidopsis thaliana - phyA Mutante', 35, 'Coluna 2', 'Linha A', 'TSL2561 Luminosidade', 2, 'Ativo'),
+	('Arabidopsis thaliana - phyB Mutante', 30, 'Coluna 1', 'Linha B', 'LDR GL5528', 3, 'Ativo'),
+	('Arabidopsis thaliana - cry1 Mutante', 28, 'Coluna 2', 'Linha B', 'VEML7700', 4, 'Ativo'),
+	('Arabidopsis thaliana - hy5 Mutante', 25, 'Coluna 3', 'Linha A', 'MAX44009', 5, 'Ativo'),
+	('Arabidopsis thaliana - cop1 Mutante', 20, 'Coluna 3', 'Linha B', 'OPT3001', 6, 'Ativo');
+    
+SELECT * FROM grupo_plantas;
+
+-- table futura
 /*
 id INT AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(100),
