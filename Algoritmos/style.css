@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); /*font style*/
 
+body{
+    background-color: #E8F1F2;
+}
+
 .container-simulador{
     display: flex; /*Possibilita a flexibilidade de organização dos elementos dentro do container(container-simulador)*/
     justify-content: center; /*alinha o conteúdo do container horizontalmente no centro*/
@@ -7,7 +11,7 @@
     flex-direction: column; /*caso o container tenha 2 elementos ou mais, ele organiza-os um em cima o outro, de forma vertical*/
     height: 85vh; /*tamanho da altura do container em medida (vh)*/
     width: 100%; /*tammanho da largura para 100% da tela*/
-    gap: 1vh; /*espaço entre os elementos (vh) - vertical*/
+    gap: 1vh; /*espaço entre os elementos (vh) - vertical*/     
 }
 
 .container-simulador-titulo{
@@ -16,6 +20,27 @@
     justify-content: flex-start;
     height: 10%;
     width: 95%;
+}
+
+.container-simulado-titulo-h1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 60%;
+}
+
+.container-simulador-logo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    width: 40%;
+}
+
+.container-simulador-logo img{
+    height: 100px;
+    transform: translateX(-40%);
 }
 
 .container-simulador-titulo h1{
@@ -27,9 +52,92 @@
     display: flex; /*Possibilita a flexibilidade de organização dos elementos dentro do container(container-simulador)*/
     justify-content: center; /*alinha o conteúdo do container horizontalmente no centro*/
     align-items: center; /*alinha o conteúdo do container verticalmente no centro*/
-    flex-direction: column; /*caso o container tenha 2 elementos ou mais, ele organiza-os um em cima o outro, de forma vertical*/
     height: 80%; /*tamanho da altura do container em medida (vh)*/
     width: 95%; /*tammanho da largura para 100% da tela*/
+    gap: 2vh; /*espaço entre os elementos*/
+}
+
+.content-simulador-right, .content-simulador-left{
+    display: flex; /*Possibilita a flexibilidade de organização dos elementos dentro do container(container-simulador)*/
+    justify-content: center; /*alinha o conteúdo do container horizontalmente no centro*/
+    align-items: center; /*alinha o conteúdo do container verticalmente no centro*/
+    flex-direction: column;
+    height: 95%; /*tamanho da altura do container em medida (vh)*/
+    width: 50%; /*tammanho da largura para 100% da tela*/
+    gap: 1vh; /*espaço entre os elementos (vh) - vertical*/
     border: 1px solid rgba(0, 0, 0, 0.243); /* borda para visuaização*/
-    border-radius: 0.8rem;
+    border-radius: 0.8rem; /*arredondar borda*/
+}
+
+.content-right-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+    gap: 2rem;
+}
+
+.content-right-row{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 95%;
+    height: 5vh;  
+    gap: 0.4rem;
+}
+
+.content-right-row label{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.content-right-row input{
+    padding: 0.2rem 0.3rem;
+    border: 1px solid rgba(0, 0, 0, 0.262);
+    border-radius: 0.2rem;
+}
+
+.content-right-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 5vh; 
+    gap: 0.4rem;
+}
+
+.content-right-button button{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    padding: 0.7rem 2rem;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.262);
+    border-radius: 0.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.content-right-button button:hover{
+    background-color: #B3EFB2;
+}
+
+.content-right-res{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 45%;
+    width: 90%;
+    gap: 0.3em;
+    border-top: 1px solid rgba(0, 0, 0, 0.243); /* borda para visuaização*/
+    border-radius: 0.1rem;
+}
+
+.content-right-res h3{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
 }
