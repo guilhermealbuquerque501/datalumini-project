@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Simulador Financeiro Arabidopsis thaliana</title>
+</head>
+<body>
+    <div class="container-simulador">
+        <div class="container-simulador-titulo">
+            <h1>Simulador Financeiro: Sensor de iluminação da
+                 <span style="font-style: italic; font-weight: 600;">Arabidopsis thaliana</span>
+            </h1>
+        </div>
+        <div class="content-simulador">
+            <div class="content-simulador-right">
+                
+            </div>
+            <div class="content-simulador-right">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!--
+<h1>Simulador Financeiro</h1>
+    
+    inp
+    <h3>Insira quantidade de KWh gasto anual:</h3>
+    <input type="text" id="id_kwhGasto">
+    <h3>Insira preço do KWh em seu ambiente controlado (em R$):</h3>
+    <input type="text" id="id_precoKWh">
+    <h3>
+        Insira quantas horas por dia seu ambiente controlado permanece ligado:
+    <h3>
+    <input type="text" id="id_horasLigado">
+    <p>
+        <button onclick="calcular()">Calcular gasto monetário anual</button>
+    </p>
+    <h3 id="id_mensagem"></h3>
+    <script>
+    function calcular() {
+        let kwhGasto = Number(id_kwhGasto.value);
+        let precoKWh = Number(id_precoKWh.value);
+        let horasLigado = Number(id_horasLigado.value);
+        let totalGasto = kwhGasto * precoKWh;
+        let prejuizo = (horasLigado-16) * 365 * precoKWh;
+        let porcentagem = (prejuizo / totalGasto) * 100;
+        
+        id_mensagem.innerHTML = `O seu gasto monetário anual com iluminação em seu ambiente controlado é de R$${totalGasto.toFixed(2)},<br>sendo R$${prejuizo.toFixed(2)} só de <span style="color:red">prejuízo</span>, o que equivale a ${porcentagem.toFixed(2)}% do gasto total.`;
+    }
+</script>
+-->
+
+<!--
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financeiro</title>
+</head>
+<body style="text-align: center;">
+    <h1>Simulador Financeiro</h1>
+    
+    <h3>Insira quantidade de KWh gasto anual:</h3>
+    <input type="text" id="id_kwhGasto">
+    <h3>Insira preço do KWh em seu ambiente controlado (em R$):</h3>
+    <input type="text" id="id_precoKWh">
+    <h3>
+        Insira quantas horas por dia seu ambiente controlado permanece ligado:
+    <h3>
+    <input type="text" id="id_horasLigado">
+    <p>
+        <button onclick="calcular()">Calcular gasto monetário anual</button>
+    </p>
+    <h3 id="id_mensagem"></h3>
+</body>
+
+<script>
+    function calcular() {
+        let kwhGasto = Number(id_kwhGasto.value);
+        let precoKWh = Number(id_precoKWh.value);
+        let horasLigado = Number(id_horasLigado.value);
+        let totalGasto = kwhGasto * precoKWh;
+        let prejuizo = (horasLigado-16) * 365 * precoKWh;
+        let porcentagem = (prejuizo / totalGasto) * 100;
+        
+        id_mensagem.innerHTML = `O seu gasto monetário anual com iluminação em seu ambiente controlado é de R$${totalGasto.toFixed(2)},<br>sendo R$${prejuizo.toFixed(2)} só de <span style="color:red">prejuízo</span>, o que equivale a ${porcentagem.toFixed(2)}% do gasto total.`;
+    }
+</script>
+</html>
+-->

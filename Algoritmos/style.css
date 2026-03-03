@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); /*font style*/
+
+.container-simulador{
+    display: flex; /*Possibilita a flexibilidade de organização dos elementos dentro do container(container-simulador)*/
+    justify-content: center; /*alinha o conteúdo do container horizontalmente no centro*/
+    align-items: center; /*alinha o conteúdo do container verticalmente no centro*/
+    flex-direction: column; /*caso o container tenha 2 elementos ou mais, ele organiza-os um em cima o outro, de forma vertical*/
+    height: 85vh; /*tamanho da altura do container em medida (vh)*/
+    width: 100%; /*tammanho da largura para 100% da tela*/
+    gap: 1vh; /*espaço entre os elementos (vh) - vertical*/
+}
+
+.container-simulador-titulo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 10%;
+    width: 95%;
+}
+
+.container-simulador-titulo h1{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.content-simulador{
+    display: flex; /*Possibilita a flexibilidade de organização dos elementos dentro do container(container-simulador)*/
+    justify-content: center; /*alinha o conteúdo do container horizontalmente no centro*/
+    align-items: center; /*alinha o conteúdo do container verticalmente no centro*/
+    flex-direction: column; /*caso o container tenha 2 elementos ou mais, ele organiza-os um em cima o outro, de forma vertical*/
+    height: 80%; /*tamanho da altura do container em medida (vh)*/
+    width: 95%; /*tammanho da largura para 100% da tela*/
+    border: 1px solid rgba(0, 0, 0, 0.243); /* borda para visuaização*/
+    border-radius: 0.8rem;
+}
