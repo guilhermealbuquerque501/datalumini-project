@@ -15,37 +15,37 @@ body{
 }
 
 .container-simulador-titulo{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 10%;
-    width: 95%;
+    display: flex; /*Possibilita a flexibilidade de organização dos elementos dentro do container(container-simulador)*/
+    align-items: center; /*alinha o conteúdo do container verticalmente no centro*/
+    justify-content: flex-start; /*alinha o conteúdo do container horizontalmente no centro*/
+    height: 10%; /*tamanho da altura do container em medida de % do elemento pai*/
+    width: 95%; /*tammanho da largura para 10% da tela*/
 }
 
 .container-simulado-titulo-h1{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    display: flex; /*Possibilita a flexibilidade de organização dos elementos dentro do container(container-simulador)*/
+    align-items: center; /*alinha o conteúdo do container verticalmente no centro*/
+    justify-content: flex-start; /*alinha o conteúdo do container horizontalmente no centro*/
     height: 100%;
     width: 60%;
 }
 
 .container-simulador-logo{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    display: flex; /*Possibilita a flexibilidade de organização dos elementos dentro do container(container-simulador)*/
+    align-items: center; /*alinha o conteúdo do container verticalmente no centro*/
+    justify-content: flex-end; /*alinha o conteúdo do container horizontalmente na direita*/
     height: 100%;
     width: 40%;
 }
 
 .container-simulador-logo img{
-    height: 100px;
-    transform: translateX(-40%);
+    height: 100px; /*tamanho da imagem em px*/
+    transform: translateX(-40%); /*mudando a posição da imagem dentro do container */
 }
 
 .container-simulador-titulo h1{
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    font-family: "Roboto", sans-serif; /*font style*/
+    font-weight: 400; /*grossura da font*/
 }
 
 .content-simulador{
@@ -76,7 +76,7 @@ body{
     flex-direction: column;
     height: 50%;
     width: 100%;
-    gap: 2rem;
+    gap: 2rem; /*gap entre os elementos*/
 }
 
 .content-right-row{

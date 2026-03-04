@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -28,7 +28,7 @@
                         <input type="number" id="id_horasLigado">
                     </div>
                     <div class="content-right-row">
-                        <label for="">Insira quantidade de KWh gasto anual:</label>
+                        <label for="">Insira quantidade de KWh anual:</label>
                         <input type="number" id="id_kwhGasto">
                     </div>
                     <div class="content-right-row">
@@ -78,23 +78,31 @@
         let porcentagem = 0;
         let prejuizo = 0;
 
-        if(horasLigado > 16){
-             prejuizo = (horasLigado - 16) * 365 * precoKWh;
-        }else if (horasLigado == 0) {
-         prejuizo = (16) * 365 * precoKWh;
+        if (horasLigado > 16) {
+            prejuizo = (totalGasto / horasLigado) * (horasLigado - 16);
         }else if (horasLigado == 16) {
             prejuizo = 0;
-        }else if (horasLigado < 16) {
-            prejuizo = (16 - horasLigado) * 365 * precoKWh;
+        } else if (horasLigado < 16) {
+            prejuizo = (16 - horasLigado) * 365 * precoKWh; //mudar aqui ele não tem prejuizo em kwh e sim por falta
         }
 
-         porcentagem = (prejuizo / totalGasto) * 100;
+        porcentagem = (prejuizo / totalGasto) * 100;
 
-        id_mensagem.innerHTML = `O seu gasto monetário anual com iluminação em seu ambiente controlado é de R$${totalGasto.toFixed(2)},<br>sendo R$${prejuizo.toFixed(2)}
+        if (horasLigado < 0 || kwhGasto == 0 || precoKWh <= 0) {
+            id_mensagem.innerHTML = `Você nâo preenchou todos os campos de forma correta <b> tente novamente </b>`;
+        } else if (horasLigado == 0) {
+            id_mensagem.innerHTML = `O seu plantio não está sendo iluminada adequadamente, isso pode a perda do plantio`;
+        }
+        else {
+            id_mensagem.innerHTML = `O seu gasto monetário anual com iluminação em seu ambiente controlado é de R$${totalGasto.toFixed(2)},<br>sendo R$${prejuizo.toFixed(2)}
          só de <span style="color:red">prejuízo</span>, o que equivale a ${porcentagem.toFixed(2)}% do gasto total.<br><br>
          <b>Obs: </b> O valor de retrabalho por câmara da <i>Arabidopsis thaliana</i> não pode ser calculado, por varios fatores 
-         váriaveis de produção que deve ser calculo pelo cliente`;
+         váriaveis de produção que deve ser calculado pelo cliente`;
+        }
+        console.log(prejuizo);
     }
+
+
 
     function calcular2() {
         let qtd_horas = Number(id_qtd_horas.value);
@@ -104,34 +112,41 @@
         luz_inferior = (100 - ((luz_atual * 100) / 120));
         luz_superior = (((luz_atual * 100) / 120) - 100);
 
-        if (luz_atual < 20) {
+        if (qtd_horas == 0 || luz_atual == 0) {
+            id_resultado_luz.innerHTML = `Você nâo preenchou todos os campos de forma correta <b> tente novamente </b>`;
+        }
+        else if  (luz_atual < 20) {
             id_resultado_luz.innerHTML = `A iluminação do lote está ${luz_inferior.toFixed(2)}% menor do que o necessário para o plantio de 
             <i>Arabidopsis thaliana</i>, o ideal é entre 120-200 µmol·m⁻²·s⁻¹.
-            O desenvolvimento da planta será extremamente lento e impedirá a florada e reprodução, não produzindo sementes.`
+            O desenvolvimento da planta será extremamente lento e impedirá a florada e reprodução, não produzindo sementes.`;
         } else if (luz_atual < 120) {
             id_resultado_luz.innerHTML = `A iluminação do lote está ${luz_inferior.toFixed(2)}% menor do que o necessário para o plantio de 
             <i>Arabidopsis thaliana</i>, o ideal é entre 120-200 µmol·m⁻²·s⁻¹.
-            O ciclo da planta ocorrerá de forma completa, porém lento.`
+            O ciclo da planta ocorrerá de forma completa, porém lento.`;
         } else if (luz_atual < 200) {
             id_resultado_luz.innerHTML = `A iluminação do lote está no nível ideal, a <i> Arabidopsis thaliana </i>
              viveria cerca de 60 dias e completaria seu ciclo corretamente, caso as horas de
-             iluminação estejam corretas também.`
+             iluminação estejam corretas também.`;
         } else {
             id_resultado_luz.innerHTML = `A iluminação do lote está ${luz_superior.toFixed(2)}% maior do que o necessário para o plantio de 
             <i>Arabidopsis thaliana</i>, o ideal é entre 120-200 µmol·m⁻²·s⁻¹. Isso
-             causará fotoinibição, afetando o crescimento da planta que não produzirá sementes.`
+             causará fotoinibição, afetando o crescimento da planta que não produzirá sementes.`;
         }
-
-        if (qtd_horas < 16) {
+        if (qtd_horas == 0 || luz_atual == 0) {
+            id_resultado_horas.innerHTML = ``;
+        }
+        else if (qtd_horas < 16) {
             id_resultado_horas.innerHTML = `A quantidade de horas de iluminação está a baixo do ideal, O ciclo será muito lento
-            e a floração atrasará, mesmo com a iluminação ideal.`
+            e a floração atrasará, mesmo com a iluminação ideal.`;
         } else if (qtd_horas == 16) {
             id_resultado_horas.innerHTML = `A quantidade de horas de iluminação está adequada, O ciclo poderá
-            ocorrer corretamente, caso a iluminação esteja adequada também.`
+            ocorrer corretamente, caso a iluminação esteja adequada também.`;
         } else {
             id_resultado_horas.innerHTML = `A quantidade de horas de iluminação está a acima do ideal, O ciclo será acelerado demais
-            o que acarretará em estresse fisiológico, comprometendo resultados positivos, mesmo com a iluminação ideal.`
+            o que acarretará em estresse fisiológico, comprometendo resultados positivos, mesmo com a iluminação ideal.`;
         }
+
+        
 
         //iluminação ideal = 120-200 µmol·m⁻²·s⁻¹
         //Tempo de cultivo = 60 dias, sendo 16h do dia e 8h da noite

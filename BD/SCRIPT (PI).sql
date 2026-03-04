@@ -1,6 +1,6 @@
 -- Criando o banco de dados do projeto
-CREATE DATABASE luminare;
-USE luminare;
+CREATE DATABASE dataLumini;
+USE dataLumini;
 
 -- Essa tabela foi criada com o intuito de guardar, gerenciar e modelar os dados que se relacionam com o cadastro da empresa
 -- no site operacional, no caso, site com função do projeto
