@@ -35,12 +35,25 @@ body{
     align-items: center; /*alinha o conteúdo do container verticalmente no centro*/
     justify-content: flex-end; /*alinha o conteúdo do container horizontalmente na direita*/
     height: 100%;
-    width: 40%;
+    width: 5%;
+}
+
+.container-simulador-logo2{
+    display: flex; /*Possibilita a flexibilidade de organização dos elementos dentro do container(container-simulador)*/
+    align-items: center; /*alinha o conteúdo do container verticalmente no centro*/
+    justify-content: flex-end;/*alinha o conteúdo do container horizontalmente na direita*/
+    height: 100%; /*tamanho da imagem em %*/
+    width: 35%; /*tamanho da largura da imagem em %*/
 }
 
 .container-simulador-logo img{
     height: 100px; /*tamanho da imagem em px*/
-    transform: translateX(-40%); /*mudando a posição da imagem dentro do container */
+    display: flex;
+}
+
+.container-simulador-logo2 img{
+    height: 250px; /*tamanho da imagem em px*/
+    display: flex;
 }
 
 .container-simulador-titulo h1{
