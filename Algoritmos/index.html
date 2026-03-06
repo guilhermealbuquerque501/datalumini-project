@@ -31,11 +31,11 @@
                         <input type="number" id="id_horasLigado">
                     </div>
                     <div class="content-right-row">
-                        <label for="">Insira quantidade de KWh anual:</label>
+                        <label for="">Insira a quantidade de KWh anual:</label>
                         <input type="number" id="id_kwhGasto">
                     </div>
                     <div class="content-right-row">
-                        <label for="">Insira preço do KWh em seu ambiente controlado (em R$):</label>
+                        <label for="">Insira o preço do KWh em seu ambiente controlado (em R$):</label>
                         <input type="number" id="id_precoKWh">
                     </div>
                     <div class="content-right-button">
@@ -98,7 +98,7 @@
         if (horasLigado > 16) {
 
             // Calcula o custo das horas extras que não seriam necessárias
-            prejuizo = (totalGasto / horasLigado) * (horasLigado - 16);
+            prejuizo = (totalGasto / (horasLigado * 365)) * ((horasLigado - 16)*365);
 
             // Caso esteja exatamente no valor ideal
         } else if (horasLigado == 16) {
@@ -110,8 +110,7 @@
         } else if (horasLigado < 16) {
 
             // Calcula uma estimativa de perda por falta de iluminação
-            // multiplicando as horas faltantes por dias do ano e preço do kWh
-            prejuizo = (16 - horasLigado) * 365 * precoKWh;
+            prejuizo = (16 - horasLigado);
         }
 
         // Calcula qual porcentagem do gasto total corresponde ao prejuízo
@@ -121,17 +120,17 @@
         // Verificação de erro caso os campos estejam preenchidos incorretamente
         if (horasLigado < 0 || kwhGasto == 0 || precoKWh <= 0) {
 
-            id_mensagem.innerHTML = `Você nâo preenchou todos os campos de forma correta <b> tente novamente </b>`;
+            id_mensagem.innerHTML = `Você nâo preenchou todos os campos de forma correta, <b> tente novamente </b>`;
 
             // Caso as luzes não estejam ligadas
         } else if (horasLigado == 0) {
 
-            id_mensagem.innerHTML = `O seu plantio não está sendo iluminada adequadamente, isso pode a perda do plantio`;
+            id_mensagem.innerHTML = `O seu plantio não está sendo iluminada adequadamente, isso pode causar a perda do plantio`;
 
             // Caso esteja abaixo do tempo ideal
         } else if (horasLigado < 16) {
 
-            id_mensagem.innerHTML = `O seu plantio não vai crescer como deveria, podendo perder sua pesquisa ou atrasando para ${horasLigado * 365} horas no ano`;
+            id_mensagem.innerHTML = `O seu plantio não vai crescer como deveria, podendo perder sua pesquisa ou atrasando cerca de ${horasLigado * 365} horas no ano`;
 
             // Caso esteja tudo correto ou acima do ideal
         } else {
