@@ -47,8 +47,9 @@ body{
 }
 
 .container-simulador-logo img{
-    height: 100px; /*tamanho da imagem em px*/
+    height: 60px; /*tamanho da imagem em px*/
     display: flex;
+    transform: translateX(10%);
 }
 
 .container-simulador-logo2 img{
@@ -59,6 +60,7 @@ body{
 .container-simulador-titulo h1{
     font-family: "Roboto", sans-serif; /*font style*/
     font-weight: 400; /*grossura da font*/
+    font-size: 1.4rem;
 }
 
 .content-simulador{
@@ -68,6 +70,7 @@ body{
     height: 80%; /*tamanho da altura do container em medida (vh)*/
     width: 95%; /*tammanho da largura para 100% da tela*/
     gap: 2vh; /*espaço entre os elementos*/
+    padding-top: 3rem;
 }
 
 .content-simulador-right, .content-simulador-left{
@@ -80,6 +83,7 @@ body{
     gap: 1vh; /*espaço entre os elementos (vh) - vertical*/
     border: 1px solid rgba(0, 0, 0, 0.243); /* borda para visuaização*/
     border-radius: 0.8rem; /*arredondar borda*/
+    padding: 2rem;
 }
 
 /* Grupo principal do lado direito da interface */
@@ -109,7 +113,7 @@ body{
 .content-right-row label{
     font-family: "Roboto", sans-serif; /* define a fonte do texto */
     font-weight: 400; /* peso normal da fonte */
-    font-size: 1.1rem; /* tamanho da fonte */
+    font-size: 0.9rem; /* tamanho da fonte */
 }
 
 
@@ -129,6 +133,7 @@ body{
     width: 95%; /* ocupa quase toda a largura */
     height: 5vh; /* altura baseada na altura da tela */
     gap: 0.4rem; /* espaço entre possíveis elementos */
+    padding-bottom: 1rem;
 }
 
 
@@ -169,5 +174,5 @@ body{
 .content-right-res h3{
     font-family: "Roboto", sans-serif; /* define a fonte */
     font-weight: 400; /* peso normal */
-    font-size: 1.1rem; /* tamanho da fonte */
+    font-size: 0.9rem; /* tamanho da fonte */
 }
