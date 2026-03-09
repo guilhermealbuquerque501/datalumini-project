@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -157,9 +157,9 @@
         else {
 
             // Exibe os resultados do cálculo
-            id_mensagem.innerHTML = `O seu gasto monetário anual com iluminação em seu ambiente controlado é de <span style="color:green;"> <b> R$${totalGasto.toFixed(2)} </b> </span>,
+            id_mensagem.innerHTML = `O seu gasto monetário anual com iluminação em seu ambiente controlado é de <span style="color:green;"> <b> R$${totalGasto.toFixed(2)}</b></span>,
             sendo <span style="color:red"> <b> R$${prejuizo.toFixed(2)} </b> </span>só de <span style="color:red"><b>prejuízo</b></span>, o que equivale a <b> ${porcentagem.toFixed(2)}% </b> do gasto total.
-            <br><br>A taxa e valor de prejuízo são calculados a partir do número de horas a mais que a planta recebe, comparado ao
+            A taxa e valor de prejuízo são calculados a partir do número de horas a mais que a planta recebe, comparado ao
             número ideal que é 16 horas. <br> <br>
             
             <b>Obs: </b> O valor de retrabalho por câmara da <i>Arabidopsis thaliana</i> não pode ser calculado, por vários fatores 
@@ -212,7 +212,7 @@
             // Iluminação ideal
         } else if (luz_atual <= 200) {
 
-            id_resultado_luz.innerHTML = `A iluminação do lote está no nível ideal, a <i> Arabidopsis thaliana </i>
+            id_resultado_luz.innerHTML = `A iluminação do lote está no <span  style="color:green;"><b>nível ideal </b></span>, a <i> <b> Arabidopsis thaliana </b></i>
              viveria cerca de 60 dias e completaria seu ciclo corretamente, caso as horas de
              iluminação estejam corretas também.`;
 
@@ -236,14 +236,14 @@
         }
         else if (qtd_horas < 16) {
 
-            id_resultado_horas.innerHTML = `A quantidade de horas de iluminação está abaixo do ideal, O ciclo será muito lento
+            id_resultado_horas.innerHTML = `A quantidade de horas de iluminação está <span style="color:red;"><b>abaixo do ideal </b> </span>, O ciclo será muito lento
             e a floração atrasará, mesmo com a iluminação ideal.
             A quantidade ideal de horas de iluminação das espécimes da <i><b> Arabidopsis thaliana</i></b> é de 16 horas.`;
 
             // Ideal
         } else if (qtd_horas == 16) {
 
-            id_resultado_horas.innerHTML = `A quantidade de horas de iluminação está adequada, O ciclo poderá
+            id_resultado_horas.innerHTML = `A quantidade de horas de iluminação está <span style="color:green;"> <b> adequada </b></span>, O ciclo poderá
             ocorrer corretamente, caso a iluminação esteja adequada também.`;
 
             // Acima do ideal
@@ -254,7 +254,7 @@
         }
         else {
 
-            id_resultado_horas.innerHTML = `A quantidade de horas de iluminação está acima do ideal, O ciclo será acelerado demais
+            id_resultado_horas.innerHTML = `A quantidade de horas de iluminação está <span style="color:red;"><b> acima do ideal </b></span>, O ciclo será acelerado demais
             o que acarretará em estresse fisiológico, comprometendo resultados positivos, mesmo com a iluminação ideal.
             A quantidade ideal de horas de iluminação das espécimes da <i><b> Arabidopsis thaliana</i></b> é de 16 horas.`;
         }
