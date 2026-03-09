@@ -101,7 +101,7 @@ body{
 .content-right-row{
     display: flex; /* usa flexbox para alinhar os elementos da linha */
     align-items: center; /* centraliza verticalmente */
-    justify-content: flex-start; /* alinha os elementos à esquerda */
+    justify-content: space-between; /* alinha os elementos à esquerda */
     width: 95%; /* ocupa 95% da largura do container */
     height: 5vh;  /* altura baseada na altura da tela */
     gap: 0.4rem; /* pequeno espaço entre label e input */
