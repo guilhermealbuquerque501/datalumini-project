@@ -133,7 +133,11 @@
             id_mensagem.innerHTML = `O seu plantio não vai crescer como deveria, podendo perder sua pesquisa ou atrasando cerca de ${horasLigado * 365} horas no ano`;
 
             // Caso esteja tudo correto ou acima do ideal
-        } else {
+        } 
+        else if (horasLigado > 24) {
+             id_mensagem.innerHTML = `O máximo de horas em um dia são 24 horas! <b> Preencha o campo corretamente. </b>`;
+        }
+        else {
 
             // Exibe os resultados do cálculo
             id_mensagem.innerHTML = `O seu gasto monetário anual com iluminação em seu ambiente controlado é de R$${totalGasto.toFixed(2)},<br>
@@ -194,7 +198,8 @@
              iluminação estejam corretas também.`;
 
             // Iluminação acima do ideal
-        } else {
+        }
+        else {
 
             id_resultado_luz.innerHTML = `A iluminação do lote está ${luz_superior.toFixed(2)}% maior do que o necessário para o plantio de 
             <i>Arabidopsis thaliana</i>, o ideal é entre 120-200 µmol·m⁻²·s⁻¹. Isso
@@ -221,7 +226,12 @@
             ocorrer corretamente, caso a iluminação esteja adequada também.`;
 
             // Acima do ideal
-        } else {
+        } 
+        else if (qtd_horas > 24) {
+            id_resultado_luz.innerHTML = ``;
+             id_resultado_horas.innerHTML = `O máximo de horas em um dia são 24 horas! <b> Preencha o campo corretamente. </b>`;
+        }
+        else {
 
             id_resultado_horas.innerHTML = `A quantidade de horas de iluminação está a acima do ideal, O ciclo será acelerado demais
             o que acarretará em estresse fisiológico, comprometendo resultados positivos, mesmo com a iluminação ideal.`;
